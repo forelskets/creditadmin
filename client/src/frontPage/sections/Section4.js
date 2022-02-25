@@ -151,12 +151,12 @@ const Section4 = () => {
       <section className="services-section">
         <div className="container">
           <div className="row">
-            <div className="col-md-4 col-12 d-md-block d-none">
+            <div className="col-md-5 col-12 d-md-block d-none">
               <div className="img-area ">
-                <img src="images/creditapp.png" alt="" className="img-fluid" />
+                <img src="images/creditapp.png" alt="" />
               </div>
             </div>
-            <div className="col-md-8 col-12 text-area">
+            <div className="col-md-7 col-12 text-area">
               <div className="align-inline">
                 <div className="icon-box1">
                   <img

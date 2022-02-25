@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Select from 'react-select';
 import axios from 'axios';
 import toastr from 'toastr';
+const eye = { fontSize: '15px', height: '0px' };
+
 const LoanForm = () => {
   const [message, setMessage] = useState('');
   const modelRef = useRef(null);
@@ -222,11 +224,9 @@ const LoanForm = () => {
 
       try {
         console.log('xios');
-        const upload = await axios.post(
-          'http://localhost:3000/kycDetails',
-          formData,
-          { withCredentials: true }
-        );
+        const upload = await axios.post('/kycDetails', formData, {
+          withCredentials: true,
+        });
         console.log(upload.data.status, upload.data.status === 401, 'upload');
         setEmployeeProfile({
           ...employeeProfile,
@@ -353,18 +353,38 @@ const LoanForm = () => {
                   <div className="form-1">
                     <div className="form-row row my-3">
                       <div className="form-group col-md-4">
+                        <label>
+                          First Name
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="right"
+                            title="for eg: AJAY"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <input
                           type="text"
-                          className="form-control"
+                          className="form-control "
                           id="fname"
                           name="fname"
                           value={employeeProfile.fname}
                           onChange={ProfileChangeHandler}
-                          placeholder=" First Name"
+                          placeholder=" Enter Your First Name"
                           disabled={validateSelectOptions()}
                         />
                       </div>
                       <div className="form-group col-md-4">
+                        <label>
+                          Last Name
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:SHARMA"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <input
                           type="text"
                           className="form-control"
@@ -377,6 +397,16 @@ const LoanForm = () => {
                         />
                       </div>
                       <div className="form-group col-md-4">
+                        <label>
+                          Father's Name
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:RAKESH"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <input
                           type="text"
                           className="form-control"
@@ -391,6 +421,16 @@ const LoanForm = () => {
                     </div>
                     <div className="form-row my-3 row">
                       <div className="form-group col-md-4">
+                        <label>
+                          Email
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:email@ex.com"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <input
                           type="email"
                           className="form-control"
@@ -403,6 +443,16 @@ const LoanForm = () => {
                         />
                       </div>
                       <div className="form-group col-md-4">
+                        <label>
+                          Date Of Birth
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:12/02/02"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <input
                           type="date"
                           className="form-control"
@@ -415,6 +465,16 @@ const LoanForm = () => {
                         />
                       </div>
                       <div className="form-group col-md-4">
+                        <label>
+                          Mobile Number
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:0123456789"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <input
                           type="text"
                           className="form-control"
@@ -428,6 +488,16 @@ const LoanForm = () => {
                       </div>
                     </div>
                     <div className="form-group my-3">
+                      <label>
+                        address
+                        <i
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="for eg:1234 Main Street aligarh"
+                          class="fas fa-eye "
+                          style={eye}
+                        ></i>
+                      </label>
                       <input
                         type="text"
                         className="form-control"
@@ -440,6 +510,16 @@ const LoanForm = () => {
                       />
                     </div>
                     <div className="form-group my-3">
+                      <label>
+                        Address 2
+                        <i
+                          data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          title="for eg:1234 Main Street aligarh"
+                          class="fas fa-eye "
+                          style={eye}
+                        ></i>
+                      </label>
                       <input
                         type="text"
                         className="form-control"
@@ -453,6 +533,16 @@ const LoanForm = () => {
                     </div>
                     <div className="form-row my-3 row">
                       <div className="form-group col-md-4">
+                        <label>
+                          State
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:Uttar Pradesh"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <Select
                           placeholder="Selected State"
                           id="state"
@@ -464,6 +554,16 @@ const LoanForm = () => {
                         />
                       </div>
                       <div className="form-group col-md-4">
+                        <label>
+                          City
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:aligarh"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <Select
                           placeholder="Selected City"
                           id="city"
@@ -475,7 +575,16 @@ const LoanForm = () => {
                         />
                       </div>
                       <div className="form-group col-md-3">
-                        <label for="inputZip"> ZIP Code</label>
+                        <label>
+                          ZIP Code
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:202001"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <input
                           type="text"
                           className="form-control"
@@ -504,7 +613,17 @@ const LoanForm = () => {
                 <div className="tab-pane fade" id="step2">
                   <div className="form-2">
                     <div className="form-row row my-3">
-                      <div className="form-group col-md-6">
+                      <div className="form-group col-md-4">
+                        <label>
+                          Company Name
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:Forelskets Softwares PVT. LTD."
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <input
                           type="text"
                           className="form-control"
@@ -516,7 +635,17 @@ const LoanForm = () => {
                           disabled={validateSelectOptions()}
                         />
                       </div>
-                      <div className="form-group col-md-6">
+                      <div className="form-group col-md-4">
+                        <label>
+                          Post/Designination
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:Front End developer"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <input
                           type="text"
                           className="form-control"
@@ -528,9 +657,18 @@ const LoanForm = () => {
                           disabled={validateSelectOptions()}
                         />
                       </div>
-                    </div>
-                    <div className="form-row my-3 row">
-                      <div className="form-group col-md-6">
+                      <div className="form-group col-md-4">
+                        <label>
+                          Current Work Expirience
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:2 Years"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
+
                         <input
                           type="text"
                           className="form-control"
@@ -542,7 +680,19 @@ const LoanForm = () => {
                           disabled={validateSelectOptions()}
                         />
                       </div>
-                      <div className="form-group col-md-6">
+                    </div>
+                    <div className="form-row my-3 row">
+                      <div className="form-group col-md-4">
+                        <label>
+                          Total Work Expirience
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:4 Years"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <input
                           type="text"
                           className="form-control"
@@ -554,9 +704,17 @@ const LoanForm = () => {
                           disabled={validateSelectOptions()}
                         />
                       </div>
-                    </div>
-                    <div className="row form-row">
-                      <div className="form-group col-md-6">
+                      <div className="form-group col-md-4">
+                        <label>
+                          Monthly Income
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:13000"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <input
                           type="text"
                           className="form-control"
@@ -568,7 +726,17 @@ const LoanForm = () => {
                           disabled={validateSelectOptions()}
                         />
                       </div>
-                      <div className="form-group col-md-6">
+                      <div className="form-group col-md-4">
+                        <label>
+                          Annual Income
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:540000"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <input
                           type="text"
                           className="form-control"
@@ -608,6 +776,16 @@ const LoanForm = () => {
                   <div className="form-3">
                     <div className="form-row row my-3">
                       <div className="form-group col-md-6">
+                        <label>
+                          Adhar Card no.
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:123456789009867"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <input
                           type="text"
                           className="form-control"
@@ -633,6 +811,16 @@ const LoanForm = () => {
                     </div>
                     <div className="form-row row my-3">
                       <div className="form-group col-md-6">
+                        <label>
+                          PAN Card no.
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:123456789009867"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <input
                           type="text"
                           className="form-control"
@@ -657,6 +845,16 @@ const LoanForm = () => {
                     </div>
                     <div className="form-row row my-3">
                       <div className="form-group col-md-4">
+                        <label>
+                          Bank Name
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:SBI govt. in"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <input
                           type="text"
                           className="form-control"
@@ -669,6 +867,16 @@ const LoanForm = () => {
                         />
                       </div>
                       <div className="form-group col-md-4">
+                        <label>
+                          account no.
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:123456789009867"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <input
                           type="text"
                           className="form-control"
@@ -681,6 +889,16 @@ const LoanForm = () => {
                         />
                       </div>
                       <div className="form-group col-md-4">
+                        <label>
+                          IFSC Code
+                          <i
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="for eg:AOH1623576"
+                            class="fas fa-eye "
+                            style={eye}
+                          ></i>
+                        </label>
                         <input
                           type="text"
                           className="form-control"

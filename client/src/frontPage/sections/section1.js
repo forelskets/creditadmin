@@ -28,11 +28,7 @@ const section1 = () => {
 
               <div className="button-area">
                 <button className="button btn-4">
-                  <img
-                    src="images/get-on-playstore.png"
-                    alt=""
-                    className="img-fluid"
-                  />
+                  <img src="images/gpay.svg" alt="" className="img-fluid" />
                 </button>
               </div>
             </div>

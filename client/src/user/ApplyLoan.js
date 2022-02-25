@@ -7,35 +7,34 @@ const ApplyLoan = () => {
   const [lstatus, setLstatus] = useState(false);
   const LoanFunc = () => {
     setLstatus(!lstatus);
-  }
+  };
 
   useEffect(() => {
     callUserMainPage();
-  }, [])
+  }, []);
 
-  const history = useHistory()
+  const history = useHistory();
   const callUserMainPage = async (req, res) => {
     try {
       const res = await fetch('/userMain', {
-        method: "GET",
+        method: 'GET',
         headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json"
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
         },
-        credentials: "include"
+        credentials: 'include',
       });
 
-      const data = await res.json()
-      console.log(res)
+      const data = await res.json();
+      console.log(res);
       if (res.status === 401) {
-        history.push("/")
+        history.push('/');
       }
-      setProfile(data)
+      setProfile(data);
     } catch (err) {
       console.log(err);
     }
-  }
-
+  };
 
   return (
     <div>
@@ -72,8 +71,14 @@ const ApplyLoan = () => {
                   </div>
                   <div className="row">
                     <div className="recent-sales box">
-                      <div className="row-title mb-3 py-3" style={{cursor:'pointer'}} onClick={LoanFunc}>Apply For Loans</div>
-                      {(lstatus) ? <LoanForm /> : ""}
+                      <div
+                        className="row-title mb-3 py-3"
+                        style={{ cursor: 'pointer' }}
+                        onClick={LoanFunc}
+                      >
+                        Apply For Loans
+                      </div>
+                      {lstatus ? <LoanForm /> : ''}
                     </div>
                   </div>
                 </div>
@@ -83,11 +88,15 @@ const ApplyLoan = () => {
                   <ul className="top-sales-details">
                     <li>
                       <NavLink to="#">
-                        <img src="images/sunglasses.jpg" alt="" />
+                        <img
+                          src="images/portrait-young-smiling-woman-2.png"
+                          alt=""
+                        />
                         <span className="profile-name">{profile.Name}</span>
                       </NavLink>
                     </li>
-                    <br /><br />
+                    <br />
+                    <br />
                     <li>
                       <span className="left-text"> name </span>
                       <input
@@ -132,7 +141,8 @@ const ApplyLoan = () => {
           </div>
         </div>
       </section>
-    </div>)
+    </div>
+  );
 };
 
 export default ApplyLoan;
