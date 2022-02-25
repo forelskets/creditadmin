@@ -219,6 +219,10 @@
   outline: none;
 }
 
+.banner {
+  padding-top: 100px;
+}
+
 .features-section {
   background-color: #edf7ff;
   padding-top: 50px;
@@ -757,4 +761,8 @@
 .copyright a {
   color: white;
   font-weight: 100;
+}
+
+.back-image {
+  background-image: url('backdround.png');
 }

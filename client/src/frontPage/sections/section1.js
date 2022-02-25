@@ -6,7 +6,7 @@ const section1 = () => {
       <section className="header w-100">
         <div className="container">
           <div className="row">
-            <div className="col-md-7 col-12 text-area">
+            <div className="col-md-6 col-12 text-area banner">
               <div className="heading">
                 <span>
                   {' '}
@@ -32,7 +32,7 @@ const section1 = () => {
                 </button>
               </div>
             </div>
-            <div className="col-md-5 col-12 img-area d-md-block d-none ">
+            <div className="col-md-6 col-12 img-area d-md-block d-none ">
               <img
                 src="images/creditdash.png"
                 alt=""
