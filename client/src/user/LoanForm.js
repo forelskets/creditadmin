@@ -46,6 +46,62 @@ const LoanForm = () => {
     loanAmount: '',
     emi: '',
   });
+
+  const TotalWorkExperience = [
+    { value: '1 or less then yrs', label: '1 or less then yrs' },
+    { value: '1 to 2  yrs', label: '1 to 2 yrs' },
+    { value: '2 to 3 yrs', label: '2 or 3 yrs' },
+    { value: '3 to 4 yrs', label: '3 or 4 yrs' },
+    { value: '4 to 5 yrs', label: '4 or 5 yrs' },
+  ];
+
+  const TotalWorkExperienceHandler = (tat) => {
+    setEmployeeProfile({
+      ...employeeProfile,
+      totalExperience: tat.value,
+    });
+  };
+  const WorkExperience = [
+    { value: '1 or less then yrs', label: '1 or less then yrs' },
+    { value: '1 to 2  yrs', label: '1 to 2 yrs' },
+    { value: '2 to 3 yrs', label: '2 or 3 yrs' },
+    { value: '3 to 4 yrs', label: '3 or 4 yrs' },
+    { value: '4 to 5 yrs', label: '4 or 5 yrs' },
+  ];
+
+  const WorkExperienceHandler = (tat) => {
+    setEmployeeProfile({
+      ...employeeProfile,
+      currentCompanyExperience: tat.value,
+    });
+  };
+
+  const MonthlyIncome = [
+    { value: 'less than 10000', label: 'less than 10000' },
+    { value: '10000-25000', label: '10000-25000' },
+    { value: '25000-40000', label: '25000-40000' },
+    { value: 'up to 40000', label: 'up to 40000' },
+  ];
+
+  const MonthlyIncomeHandler = (tat) => {
+    setEmployeeProfile({
+      ...employeeProfile,
+      monthlyIncome: tat.value,
+    });
+  };
+  const AnnualIncome = [
+    { value: 'less than 1L', label: 'less than 1lac' },
+    { value: '1L-2.5L', label: '1lac-2.5lac' },
+    { value: '2.5L-3.5L', label: '2.5lac-3.5lac' },
+    { value: 'up to 3.5', label: 'up to 3.5lac' },
+  ];
+
+  const AnnualIncomeHandler = (tat) => {
+    setEmployeeProfile({
+      ...employeeProfile,
+      annualIncome: tat.value,
+    });
+  };
   const options = [
     { value: 'Delhi', label: 'Delhi' },
     { value: 'UP', label: 'UP' },
@@ -662,7 +718,7 @@ const LoanForm = () => {
                       </div>
                       <div className="form-group col-md-4">
                         <label>
-                          Current Work Expirience
+                          Current Work Experience
                           <i
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
@@ -672,7 +728,7 @@ const LoanForm = () => {
                           ></i>
                         </label>
 
-                        <input
+                        {/* <input
                           type="text"
                           className="form-control"
                           id="currentCompanyExperience"
@@ -681,13 +737,20 @@ const LoanForm = () => {
                           value={employeeProfile.currentCompanyExperience}
                           onChange={ProfileChangeHandler}
                           disabled={validateSelectOptions()}
+                        /> */}
+                        <Select
+                          placeholder="work Experience"
+                          id="workExperience"
+                          name="workExperience"
+                          options={WorkExperience}
+                          onChange={WorkExperienceHandler}
                         />
                       </div>
                     </div>
                     <div className="form-row my-3 row">
                       <div className="form-group col-md-4">
                         <label>
-                          Total Work Expirience
+                          Total Work Experience
                           <i
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
@@ -696,7 +759,7 @@ const LoanForm = () => {
                             style={eye}
                           ></i>
                         </label>
-                        <input
+                        {/* <input
                           type="text"
                           className="form-control"
                           id="totalExperience"
@@ -705,6 +768,13 @@ const LoanForm = () => {
                           value={employeeProfile.totalExperience}
                           onChange={ProfileChangeHandler}
                           disabled={validateSelectOptions()}
+                        /> */}
+                        <Select
+                          placeholder="Total work Experience"
+                          id="totalExperience"
+                          name="totalExperience"
+                          options={TotalWorkExperience}
+                          onChange={TotalWorkExperienceHandler}
                         />
                       </div>
                       <div className="form-group col-md-4">
@@ -718,7 +788,14 @@ const LoanForm = () => {
                             style={eye}
                           ></i>
                         </label>
-                        <input
+                        <Select
+                          placeholder="Monthly Income"
+                          id="monthlyIncome"
+                          name="monthlyIncome"
+                          options={MonthlyIncome}
+                          onChange={MonthlyIncomeHandler}
+                        />
+                        {/* <input
                           type="text"
                           className="form-control"
                           id="montlyIncome"
@@ -727,7 +804,7 @@ const LoanForm = () => {
                           value={employeeProfile.monthlyIncome}
                           onChange={ProfileChangeHandler}
                           disabled={validateSelectOptions()}
-                        />
+                        /> */}
                       </div>
                       <div className="form-group col-md-4">
                         <label>
@@ -740,7 +817,14 @@ const LoanForm = () => {
                             style={eye}
                           ></i>
                         </label>
-                        <input
+                        <Select
+                          placeholder="Annual Income"
+                          id="annualIncome"
+                          name="annualIncome"
+                          options={AnnualIncome}
+                          onChange={AnnualIncomeHandler}
+                        />
+                        {/* <input
                           type="text"
                           className="form-control"
                           id="annualIncome"
@@ -749,7 +833,7 @@ const LoanForm = () => {
                           value={employeeProfile.annualIncome}
                           onChange={ProfileChangeHandler}
                           disabled={validateSelectOptions()}
-                        />
+                        /> */}
                       </div>
                     </div>
 
