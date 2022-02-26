@@ -89,6 +89,9 @@ const LoanForm = () => {
   const LoanPurpose = [
     { value: 'Education Loan', label: 'Education' },
     { value: 'Personal Loan', label: 'Personal' },
+    { value: 'Home Loan', label: 'Home' },
+    { value: 'Business Loan', label: 'Business' },
+    { value: 'Flexi Loan', label: 'flexi' },
   ];
 
   const LoanAmount = [

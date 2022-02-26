@@ -374,7 +374,7 @@
 .another-timeline {
   padding-top: 20px;
   padding-bottom: 50px;
-  background-color: ##f6f7fc;
+  background-color: #f6f7fc;
 }
 
 .another-timeline .container .row {
@@ -435,7 +435,7 @@
   color: #ff6f3c;
   position: absolute;
   top: 30%;
-  left: 70%;
+  left: 60%;
   transform: translate(-50%, -50%);
 }
 .services-section .text-area .align-inline .icon-box1 {

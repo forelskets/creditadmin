@@ -148,7 +148,7 @@ import React from 'react';
 const Section4 = () => {
   return (
     <>
-      <section className="services-section">
+      {/* <section className="services-section">
         <div className="container">
           <div className="row">
             <div className="col-md-5 col-12 d-md-block d-none">
@@ -224,7 +224,20 @@ const Section4 = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <div id="ecww-widgetwrapper" style={{ minWidth: '250px', width: '100%' }}>
+        <div
+          id="ecww-widget"
+          style={{
+            position: 'relative',
+            paddingTop: '0',
+            paddingBottom: '280px',
+            height: '0',
+            overflow: 'hidden',
+          }}
+        ></div>
+      </div>
     </>
   );
 };
