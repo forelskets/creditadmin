@@ -56,7 +56,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg">
+      <nav className="navbar navbar-expand-lg fixed-top">
         <div className="container">
           <NavLink className="navbar-brand" to="#">
             <img
@@ -85,14 +85,14 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item active">
-                <button
+                {/* <button
                   className="btn-1 button my-1"
                   onClick={() => {
                     window.location.href = 'http://localhost:3001/cdashboard';
                   }}
                 >
                   get the app
-                </button>
+                </button> */}
               </li>
               <li className="nav-item active">
                 <button className="btn-2 button my-1" onClick={register}>
