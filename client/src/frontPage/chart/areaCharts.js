@@ -58,7 +58,7 @@ const AreaChart1 = () => {
     <div style={{ padding: '10px' }}>
       <AreaChart
         width={530}
-        height={400}
+        height={300}
         data={data}
         margin={{ top: 20, right: 30, left: 0, bottom: 0 }}
       >
@@ -69,7 +69,7 @@ const AreaChart1 = () => {
         {/* <ReferenceLine x="Page C" stroke="green" label="Min PAGE" /> */}
         {/* <ReferenceLine y={4000} label="Max" stroke="red" strokeDasharray="3 3" /> */}
         {/* <ReferenceLine label="Segment" stroke="green" strokeDasharray="3 3" segment={[{ x: 'Page A', y: 0 }, { x: 'Page C', y: 4000 }]} /> */}
-        <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="orange" />
+        <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="red" />
       </AreaChart>
     </div>
   );

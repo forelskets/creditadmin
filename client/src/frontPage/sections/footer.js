@@ -7,9 +7,9 @@ const footer = () => {
       <section className="footer">
         <div className="container">
           <div className="row">
-            <div className="col-6 col-md-8">
+            <div className="col-12 col-md-12">
               <div className="row">
-                <div className="col-md-6 text-area">
+                <div className="col-md-4 text-area">
                   <div className="align-inline">
                     <a className="footer-brand" href="#">
                       <img
@@ -27,7 +27,16 @@ const footer = () => {
                     to the customers and get a fast payout every month.
                   </p>
                 </div>
-                <div className="col-md-6 info-area">
+                <div className="col-md-4 text-area">
+                  <div className="align-inline">
+                    <h3>Need Help?</h3>
+                  </div>
+                  <li>Support</li>
+                  <li>PrivacyPolicy</li>
+                  <li>About Us</li>
+                  <li>Create An Account</li>
+                </div>
+                <div className="col-md-4 info-area">
                   <div className="align-inline">
                     <div className="m-auto">
                       <i className="fab fa-instagram"></i>
@@ -45,7 +54,7 @@ const footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 col-6 img-area">
+            {/* <div className="col-md-4 col-6 img-area">
               <img
                 src="images/MOBILEPNG.png"
                 className="img-fluid d-md-block d-none"
@@ -56,7 +65,7 @@ const footer = () => {
                 className="img-fluid d-md-none d-block"
                 alt=""
               />
-            </div>
+            </div> */}
           </div>
         </div>
 

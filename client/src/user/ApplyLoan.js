@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import LoanForm from './LoanForm';
+import Apply from './Apply';
+import Bank from './Bank';
 
 const ApplyLoan = () => {
   const [profile, setProfile] = useState({});
@@ -67,6 +69,17 @@ const ApplyLoan = () => {
                         </div>
                         <i className="fas fa-hand-holding-usd"></i>
                       </div>
+                    </div>
+                  </div>
+
+                  <div className="row pb-5">
+                    <div className="recent-sales box">
+                      <Apply />
+                    </div>
+                  </div>
+                  <div className="row pb-3">
+                    <div className="recent-sales box">
+                      <Bank />
                     </div>
                   </div>
                   <div className="row">

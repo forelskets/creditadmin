@@ -13,13 +13,13 @@ const bannerChart = () => {
       name: 'Earning',
       uv: 26.69,
       pv: 4567,
-      fill: '#83a6ed',
+      fill: '#ff0000',
     },
     {
       name: 'Repeated Customers',
-      uv: -15.69,
+      uv: 30.2,
       pv: 1398,
-      fill: '#8dd1e1',
+      fill: '#001f3d',
     },
     {
       name: 'Amount',
@@ -29,9 +29,9 @@ const bannerChart = () => {
     },
     {
       name: 'Refferals',
-      uv: -8.63,
+      uv: 18.63,
       pv: 3908,
-      fill: '#a4de6c',
+      fill: '#ffcc00',
     },
   ];
   return (

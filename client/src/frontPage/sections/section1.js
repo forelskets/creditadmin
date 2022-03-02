@@ -25,25 +25,34 @@ const section1 = () => {
                 <span className="paragraph">
                   Start Your Business with Zero Investment and Earn over
                   ₹1,00,000 Every Month. Provide financial advice and products
-                  to the customers and get a fast payout every month.
+                  to the <br />
+                  customers and get a fast payout every month.
                 </span>
               </div>
 
               <div className="button-area">
-                <button className="button btn-4">
+                <button
+                  className="button btn-4"
+                  onClick={() => {
+                    window.location.href = 'http://localhost:3000/form';
+                  }}
+                >
+                  <a></a> Register
+                </button>
+                <button className="button btn-3">
                   <img src="images/gpay.svg" alt="" className="img-fluid" />
                 </button>
               </div>
             </div>
 
             <div className="col-md-7 col-12 img-area d-md-block d-none">
-              {/* <img
+              <img
                 src="images/creditdash.png"
                 alt=""
                 className="img-container"
-              /> */}
-              <div className="bannerimg">
-                <div
+              />
+
+              {/* <div
                   className="card "
                   style={{
                     width: '36rem',
@@ -53,13 +62,13 @@ const section1 = () => {
                 >
                   <h4 style={{ padding: '15px' }}>Live Statistics</h4>
                   <AreaChart1 />
-                </div>
+                </div> */}
 
-                <div
+              {/* <div
                   className="card "
                   style={{
                     width: '26rem',
-                    margin: '-220px  0px 10px 390px ',
+                    margin: '-200px  0px 10px 390px ',
                     zIndex: '2',
                     border: '1 solid #000000',
                     borderRadius: '10px',
@@ -67,32 +76,7 @@ const section1 = () => {
                 >
                   <h4 style={{ padding: '15px' }}>Live Statistics</h4>
                   <Bannerchart />
-                  <div className="card-body">
-                    {/* <div className="row">
-                    <div className="col">
-                      <ul>
-                        chhavi <span>500</span>
-                      </ul>
-                    </div>
-                    <div className="col">
-                      e card's <br />
-                      content.sdfs
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col">
-                      <ul>
-                        chhavi <span>500</span>
-                      </ul>
-                    </div>
-                    <div className="col">
-                      e card's <br />
-                      content.sdfs
-                    </div> 
-                  </div>*/}
-                  </div>
-                </div>
-              </div>
+                </div> */}
             </div>
           </div>
         </div>

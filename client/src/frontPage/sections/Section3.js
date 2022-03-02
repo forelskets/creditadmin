@@ -49,46 +49,56 @@ const Section3 = () => {
           className="row col-sm-12 mx-5 py-5 "
           style={{ margin: 'auto 30px' }}
         >
+          <h1
+            className="heading text-center"
+            // style={{
+            //   margin: 'auto 30px',
+            // }}
+            style={{ paddingBottom: '30px' }}
+          >
+            Creditsin a platform which <br />
+            boost's customer engagement
+          </h1>
           <div
             className="card  card1"
             style={{ width: '18rem', margin: 'auto 20px' }}
           >
-            <img className="card-img-top" src="..." alt="Card image cap" />
+            <i class="fas fa-share fa-4x" style={{ margin: '20px 100px' }}></i>
             <div className="card-body">
-              <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
+              <h4 className="text-center">Every Customer Earn Credits</h4>
             </div>
           </div>
           <div
-            className="card "
+            className="card card2"
             style={{ width: '18rem', margin: 'auto 20px' }}
           >
-            <img className="card-img-top" src="..." alt="Card image cap" />
+            <i
+              class="fas fa-user-alt fa-4x"
+              style={{ margin: '20px 100px' }}
+            ></i>
             <div className="card-body">
-              <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
+              <h4 className="text-center">Get Targeted Audience</h4>
             </div>
           </div>
-          <div className="card" style={{ width: '18rem', margin: 'auto 20px' }}>
-            <img className="card-img-top" src="..." alt="Card image cap" />
+          <div
+            className="card card4"
+            style={{ width: '18rem', margin: 'auto 20px' }}
+          >
+            <i
+              class="fas fa-credit-card fa-4x"
+              style={{ margin: '20px 100px' }}
+            ></i>
             <div className="card-body">
-              <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
+              <h4 className="text-center">Refer and Earn Credits</h4>
             </div>
           </div>
-          <div className="card" style={{ width: '18rem', margin: 'auto 20px' }}>
-            <img className="card-img-top" src="..." alt="Card image cap" />
+          <div
+            className="card card3"
+            style={{ width: '18rem', margin: 'auto 20px' }}
+          >
+            <i class="fas fa-ring fa-4x" style={{ margin: '20px 100px' }}></i>
             <div className="card-body">
-              <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
+              <h4 className="text-center">Inc. Customer engagement</h4>
             </div>
           </div>
         </div>
@@ -116,6 +126,15 @@ const Section3 = () => {
                 </div>
               </div>
               <div className="col-md-7 col-12 text-area">
+                <h2
+                  style={{
+                    marginLeft: '28%',
+                    textAlign: 'left',
+                    fontWeight: '600',
+                  }}
+                >
+                  Reach customers anywhere and everywhere
+                </h2>
                 <div className="align-inline">
                   <div className="icon-box1">
                     <img
@@ -125,7 +144,7 @@ const Section3 = () => {
                     />
                   </div>
                   <div className="text-box">
-                    <h2 className="heading">dummy text</h2>
+                    <h2 className="heading">Cashback Reward</h2>
                     <p className="paragraph">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Pariatur laborum id natus nihil sint.
@@ -141,7 +160,7 @@ const Section3 = () => {
                     />
                   </div>
                   <div className="text-box">
-                    <h2 className="heading">dummy text</h2>
+                    <h2 className="heading">Coupan Rewards</h2>
                     <p className="paragraph">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Pariatur laborum id natus nihil sint.
@@ -157,7 +176,7 @@ const Section3 = () => {
                     />
                   </div>
                   <div className="text-box">
-                    <h2 className="heading">dummy text</h2>
+                    <h2 className="heading">Customer engagement</h2>
                     <p className="paragraph">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Pariatur laborum id natus nihil sint.
@@ -173,7 +192,7 @@ const Section3 = () => {
                     />
                   </div>
                   <div className="text-box">
-                    <h2 className="heading">dummy text</h2>
+                    <h2 className="heading">Increase engagement</h2>
                     <p className="paragraph">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Pariatur laborum id natus nihil sint.
@@ -186,8 +205,8 @@ const Section3 = () => {
         </section>
         <section className=" card-slider-section">
           <div className="container">
-            <h1 className="heading">people love us</h1>
-            <h3 className="heading2">You happy. We happy</h3>
+            <h1 className="heading">Reward for Anything & Everything</h1>
+            <h3 className="heading2">Customers will love Creditsin</h3>
             <div className="row">
               <div className="col-12">
                 <div

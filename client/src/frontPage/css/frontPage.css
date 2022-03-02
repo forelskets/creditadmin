@@ -661,6 +661,12 @@
   padding: 100px 0px 0px 0px;
   background-color: #001f3d;
 }
+.footer h3 {
+  color: white;
+}
+.footer li {
+  color: white;
+}
 .footer .footer-brand img {
   vertical-align: middle;
   display: inline;
@@ -678,7 +684,7 @@
   font-size: 17px;
   color: white;
   text-align: justify;
-  margin: 40px 0px 10px 0px;
+  margin: 40px 30px 10px 0px;
 }
 .footer .info-area {
   text-align: center;
@@ -791,6 +797,30 @@
   box-shadow: -1px -1px 17px 0px rgb(100, 95, 99);
 }
 .card1:hover {
-  background-color: #ff3ee3;
+  background-color: #ecc394;
+  transition: 3ms;
+}
+.card2 {
+  background-color: #f6f7fc;
+  box-shadow: -1px -1px 17px 0px rgb(100, 95, 99);
+}
+.card2:hover {
+  background-color: #c1dbaf;
+  transition: 3ms;
+}
+.card3 {
+  background-color: #ffff;
+  box-shadow: -1px -1px 17px 0px rgb(100, 95, 99);
+}
+.card3:hover {
+  background-color: #ff556e;
+  transition: 3ms;
+}
+.card4 {
+  background-color: #ffff;
+  box-shadow: -1px -1px 17px 0px rgb(100, 95, 99);
+}
+.card4:hover {
+  background-color: #ebc4f0;
   transition: 3ms;
 }
