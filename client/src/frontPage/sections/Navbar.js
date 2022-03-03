@@ -56,7 +56,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg fixed-top">
+      <nav className="navbar navbar-expand-lg ">
         <div className="container">
           <NavLink className="navbar-brand" to="#">
             <img

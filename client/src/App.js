@@ -18,7 +18,9 @@ import AdminDashBoard from './admin/AdminDashBoard';
 import AdminBank from './admin/AdminBank';
 import AdminOffer from './admin/AdminOffer';
 import formReg from './frontPage/sections/formreg';
-
+import Salaried from './user/Salaried';
+import Business from './user/Business';
+import Loan from './user/Loan';
 toastr.options = {
   positionClass: 'toast-top-center',
 };
@@ -39,6 +41,9 @@ function App() {
         <Route path="/adminDashboard" component={AdminDashBoard} />
         <Route path="/adminApplication" component={AdminApplication} />
         <Route path="/adminBank" component={AdminBank} />
+        <Route path="/salaried" component={Salaried} />
+        <Route path="/business" component={Business} />
+        <Route path="/loan" component={Loan} />
       </Switch>
     </div>
   );
